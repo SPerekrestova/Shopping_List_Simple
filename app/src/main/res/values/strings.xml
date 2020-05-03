@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Shopping List</string>
+    <string name="add_item">Add Item</string>
+    <string name="activity2_name">Second Activity</string>
+    <string name="cheese">Cheese</string>
+    <string name="rice">Rice</string>
+    <string name="apples">Apples</string>
+    <string name="oranges">oranges</string>
+    <string name="mango">mango</string>
+    <string name="meat">meat</string>
+    <string name="lemon">lemon</string>
+    <string name="juice">juice</string>
+    <string name="beacon">beacon</string>
+    <string name="tomatoes">tomatoes</string>
+    <string name="bananas">bananas</string>
+    <string name="milk">milk</string>
+</resources>
