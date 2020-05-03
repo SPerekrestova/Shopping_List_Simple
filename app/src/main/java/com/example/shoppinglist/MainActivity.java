@@ -3,9 +3,11 @@ package com.example.shoppinglist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int TEXT_REQUEST = 1;
     private int textViewCount = 10;
     private TextView[] textViewArray = new TextView[textViewCount];
+    private EditText mStoreName;
 
 
     @Override
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         textViewArray[7] = findViewById(R.id.textView_8);
         textViewArray[8] = findViewById(R.id.textView_9);
         textViewArray[9] = findViewById(R.id.textView_10);
+        mStoreName = findViewById(R.id.store_location);
         // Restore the saved state.
         // See onSaveInstanceState() for what gets saved.
         if (savedInstanceState != null) {
@@ -81,6 +85,17 @@ public class MainActivity extends AppCompatActivity {
                 outState.putBoolean("reply_visible" + i, true);
                 outState.putString("reply_text" + i, textViewArray[i].getText().toString());
             }
+        }
+    }
+
+    public void findStore(View view) {
+        String store = mStoreName.getText().toString();
+        Uri addressUri = Uri.parse("geo:0,0?q=" + store);
+        Intent intent = new Intent(Intent.ACTION_VIEW, addressUri);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("ImplicitIntents", "Can't handle this intent!");
         }
     }
 }

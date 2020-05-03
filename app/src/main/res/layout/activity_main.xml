@@ -30,9 +30,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_1"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_1" />
 
     <TextView
         android:id="@+id/textView_3"
@@ -44,9 +44,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_2"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_2" />
 
     <TextView
         android:id="@+id/textView_4"
@@ -58,9 +58,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_3"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_3" />
 
     <TextView
         android:id="@+id/textView_5"
@@ -72,9 +72,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_4"
-        android:visibility="invisible" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_4" />
 
     <TextView
         android:id="@+id/textView_6"
@@ -86,9 +86,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_5"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_5" />
 
     <TextView
         android:id="@+id/textView_7"
@@ -100,9 +100,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_6"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_6" />
 
     <TextView
         android:id="@+id/textView_8"
@@ -114,9 +114,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_7"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_7" />
 
     <TextView
         android:id="@+id/textView_9"
@@ -128,9 +128,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_8"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_8" />
 
     <TextView
         android:id="@+id/textView_10"
@@ -142,19 +142,44 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_9"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_9" />
 
     <Button
         android:id="@+id/btn_add_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="@string/add_item"
         android:onClick="launchSecondActivity"
+        android:text="@string/add_item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/store_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_store"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_10" />
+
+    <Button
+        android:id="@+id/button_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="findStore"
+        android:text="@string/find_store"
+        app:layout_constraintBaseline_toBaselineOf="@+id/store_location"
+        app:layout_constraintStart_toEndOf="@+id/store_location" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

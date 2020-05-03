@@ -14,4 +14,6 @@
     <string name="tomatoes">tomatoes</string>
     <string name="bananas">bananas</string>
     <string name="milk">milk</string>
+    <string name="enter_store">Enter store</string>
+    <string name="find_store">Find store</string>
 </resources>
